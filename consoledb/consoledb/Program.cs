@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using consoledb.Services;
 using consoledb.DataStruct;
-
 
 namespace consoledb
 {
@@ -34,7 +32,7 @@ namespace consoledb
             string baseDir = FileHandler.GetBasePath() + "/.consoledb";
             FileHandler.CreateDir(baseDir);
 
-
+            baseDir += "/test.txt";
             FileHandler.WriteFile(baseDir, "gilbert-testing \n test");
 
             Console.WriteLine(FileHandler.ReadFileConcat(baseDir));
