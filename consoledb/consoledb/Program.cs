@@ -38,6 +38,12 @@ namespace consoledb
             Console.WriteLine(FileHandler.ReadFileConcat(baseDir));
 
             Console.ReadKey();
+
+            // json testing
+            CoreDataHandler coreData = new CoreDataHandler();
+            
+
+            Console.ReadKey();
             // FileHandler.DeleteDir(baseDir + "/gil-test");
         }
     }

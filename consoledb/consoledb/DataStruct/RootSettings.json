@@ -1,0 +1,13 @@
+{
+    "databases": {
+        "root_db": {
+            "root_group": {
+                "root_settings": {
+                    "email": "gilbert.cuerbo@gmail.com",
+                    "username": "bertwo",
+                    "password": "admin"
+                }
+            }
+        }
+    }
+}
