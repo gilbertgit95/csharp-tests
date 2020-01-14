@@ -32,6 +32,11 @@ namespace consoledb.Services
             Directory.Delete(path, true);
         }
 
+        public static void DeleteFile(string path)
+        {
+            File.Delete(path);
+        }
+
         public static void WriteFile(string path, string content)
         {
             StreamWriter str = new StreamWriter(path);
