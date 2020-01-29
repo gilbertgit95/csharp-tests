@@ -15,6 +15,14 @@ namespace consoledb.DataStruct
         public string email;
         public string username;
         public string password;
+
+        public string firstName;
+        public string lastName;
+        public string middleName;
+        public string address;
+        public string gender;
+        public string description;
+        public int age;
     }
     class RootGroupData
     {
@@ -32,17 +40,40 @@ namespace consoledb.DataStruct
             root_db.root_group.root_settings.email = "";
             root_db.root_group.root_settings.username = "";
             root_db.root_group.root_settings.password = "";
+            root_db.root_group.root_settings.firstName = "";
+            root_db.root_group.root_settings.middleName = "";
+            root_db.root_group.root_settings.lastName = "";
+            root_db.root_group.root_settings.address = "";
+            root_db.root_group.root_settings.gender = "";
+            root_db.root_group.root_settings.description = "";
+            //root_db.root_group.root_settings.age = 0;
         }
     }
 
     class DataHandler
     {
-        public static string GetDirStructJson(string email, string username, string password)
+        public static string GetDirStructJson(
+            string email = "",
+            string username = "",
+            string password = "",
+            string firstName = "",
+            string middleName = "",
+            string lastName = "",
+            string address = "",
+            string gender = "",
+            int age = 0
+        )
         {
             DirStructData dir = new DirStructData();
-            dir.root_db.root_group.root_settings.email = email != null? email: "";
-            dir.root_db.root_group.root_settings.username = username != null ? username : "";
-            dir.root_db.root_group.root_settings.password = password != null ? password : "";
+            dir.root_db.root_group.root_settings.email =      email;
+            dir.root_db.root_group.root_settings.username =   username;
+            dir.root_db.root_group.root_settings.password =   password;
+            dir.root_db.root_group.root_settings.firstName =  firstName;
+            dir.root_db.root_group.root_settings.middleName = middleName;
+            dir.root_db.root_group.root_settings.lastName =   lastName;
+            dir.root_db.root_group.root_settings.address =    address;
+            dir.root_db.root_group.root_settings.gender =     gender;
+            dir.root_db.root_group.root_settings.age =        age;
 
             return JsonConvert.SerializeObject(dir);
         }
